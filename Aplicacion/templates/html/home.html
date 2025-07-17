@@ -1,0 +1,355 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Walk App</title>
+  <link rel="stylesheet" href="{% static '/css/home.css' %}"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <link rel="icon" href="{% static '/images/imagenes/logo.jpg' %}" type="image/x-icon">
+</head>
+
+<body>
+  <!-- ========= ENCABEZADO ========== -->
+  <header class="header-wrapper">
+    <nav class="main-nav">
+      <!-- Izquierda: Logo y título -->
+      <div class="nav-brand">
+        <img src="{% static '/images/imagenes/logo.jpg' %}" alt="Walk App Logo" class="nav-logo" />
+        <h1 class="nav-title">Walk App</h1>
+      </div>
+
+      <!-- Centro: Enlaces de navegación -->
+      <div class="nav-center">
+        <ul class="nav-links">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="/html/comunidad.html">Comunidad</a></li>
+          <li><a href="/juegos/juegos.html">Juegos</a></li>
+          <li><a href="/html/rutas.html">Rutas</a></li>
+          <li><a href="/html/ranking.html">Ranking</a></li>
+        </ul>
+      </div>
+
+      <!-- Derecha: Búsqueda e inicio de sesión -->
+      <div class="nav-right">
+        <form class="nav-search">
+          <div class="input-container">
+            <input type="text" placeholder="Buscar" class="nav-input" />
+            <button type="submit" class="nav-icon-button" aria-label="Buscar">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </form>
+        <a href="/html/login.html" class="btn-login">Iniciar sesión</a>
+      </div>
+
+      <!-- Botón menú hamburguesa -->
+      <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+
+    <!-- ========= MENÚ LATERAL MÓVIL ========= -->
+    <div id="mobileMenu" class="mobile-menu">
+      <div class="menu-header">
+        <img src="/imgs/imagenes/logo.jpg" alt="Walk App Logo" class="nav-logo" />
+        <h1 class="mobile-menu-titulo">WALK APP</h1>
+        <button id="closeMenu" class="close-btn" aria-label="Cerrar menú">&times;</button>
+      </div>
+      <a href="#">Inicio</a>
+      <a href="/html/comunidad.html">Comunidad</a>
+      <a href="/juegos/juegos.html">Juegos</a>
+      <a href="/html/rutas.html">Rutas</a>
+      <a href="/html/ranking.html">Ranking</a>
+      <a href="/html/login.html" class="btn-login">Iniciar sesión</a>
+
+      <form class="nav-search">
+        <div class="input-icon-wrapper">
+          <input type="text" placeholder="Buscar" class="nav-input" />
+          <button type="submit" class="nav-button-inside" aria-label="Buscar">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- ========= BIENVENIDA ========= -->
+    <div class="bienvenida">
+      <img src="{% static '/images/imagenes/logo.jpg' %}" alt="Logo Walk App" class="main-logo img-fluid mx-auto d-block mb-4" />
+      <h1 class="text-center">Bienvenidos a <span>WALK APP</span></h1>
+      <p class="text-center">Descubre rutas, comparte experiencias y da sentido a cada paso.</p>
+    </div>
+  </header>
+
+  <!-- ============ CONTENIDO ============= -->
+  <section class="portfolio section-padding" data-scroll-index="3">
+    <div class="container">
+      <div class="section-title text-center">
+        <h3>Senderismo</h3>
+        <p>"Naturaleza que inspira, senderos que transforman."</p>
+        <span class="section-title-line"></span>
+      </div>
+
+      <div class="gallery-grid">
+
+        <!-- === ITEM 1 === -->
+        <div class="gallery-item">
+          <img src="{% static '/images/el morro/el_morro.jpg' %}" alt="El Morro">
+          <div class="image-title">El Morro</div>
+          <div class="overlay-img">
+            <h4>Primavera</h4>
+            <h6>Ruta El Morro</h6>
+            <h5>Distancia: 5 km</h5>
+            <p>Dificultad: Media</p>
+            <div class="overlay-buttons">
+              <a href="/html/rutas.html" class="btn btn-map"><i class="fas fa-map-marked-alt"></i> Ver ruta</a>
+              <a href="#" class="btn btn-save"><i class="fas fa-heart"></i> Guardar ruta</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- === ITEM 2 === -->
+        <div class="gallery-item">
+          <img src="{% static '/images/tres cruces/cerro.jpg' %}" alt="Las Tres Cruces">
+          <div class="image-title">Las Tres Cruces</div>
+          <div class="overlay-img">
+            <h4>Verano</h4>
+            <h6>Las Tres Cruces</h6>
+            <h5>Distancia: 6.5 km</h5>
+            <p>Dificultad: Alta</p>
+            <div class="overlay-buttons">
+              <a href="/html/rutas.html" class="btn btn-map"><i class="fas fa-map-marked-alt"></i> Ver ruta</a>
+              <a href="#" class="btn btn-save"><i class="fas fa-heart"></i> Guardar ruta</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- === ITEM 3 === -->
+        <div class="gallery-item">
+          <img src="{%static '/images/torre24/torre.jpg' %}" alt="Torre 24">
+          <div class="image-title">Torre 24</div>
+          <div class="overlay-img">
+            <h4>Invierno</h4>
+            <h6>Torre 24</h6>
+            <h5>Distancia: 4.2 km</h5>
+            <p>Dificultad: Baja</p>
+            <div class="overlay-buttons">
+              <a href="/html/rutas.html" class="btn btn-map"><i class="fas fa-map-marked-alt"></i> Ver ruta</a>
+              <a href="#" class="btn btn-save"><i class="fas fa-heart"></i> Guardar ruta</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- === ITEM 4 === -->
+        <div class="gallery-item">
+          <img src="{% static '/images/imagenes/R (1).jpeg' %}" alt="Ruta Van">
+          <div class="image-title">Ruta en Van</div>
+          <div class="overlay-img">
+            <h4>Verano</h4>
+            <h6>Ruta en Van</h6>
+            <h5>Distancia: 10 km</h5>
+            <p>Dificultad: Baja</p>
+            <div class="overlay-buttons">
+              <a href="/html/rutas.html" class="btn btn-map"><i class="fas fa-map-marked-alt"></i> Ver ruta</a>
+              <a href="#" class="btn btn-save"><i class="fas fa-heart"></i> Guardar ruta</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- === ITEM 5 === -->
+        <div class="gallery-item">
+          <img src="{% static '/images/imagenes/Aeronautica-Civil-Aeropuerto-Popayan-9.jpg' %}" alt="Aeropuerto">
+          <div class="image-title">Aeropuerto Popayán</div>
+          <div class="overlay-img">
+            <h4>Invierno</h4>
+            <h6>Aeropuerto Popayán</h6>
+            <h5>Distancia: 3 km</h5>
+            <p>Dificultad: Baja</p>
+            <div class="overlay-buttons">
+              <a href="/html/rutas.html" class="btn btn-map"><i class="fas fa-map-marked-alt"></i> Ver ruta</a>
+              <a href="#" class="btn btn-save"><i class="fas fa-heart"></i> Guardar ruta</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- === ITEM 6 === -->
+        <div class="gallery-item">
+          <img src="{% static '/images/imagenes/ranking-mensual.jpg' %}" alt="Ranking">
+          <div class="image-title">Mirador Central</div>
+          <div class="overlay-img">
+            <h4>Lluvioso</h4>
+            <h6>Mirador Central</h6>
+            <h5>Distancia: 5.5 km</h5>
+            <p>Dificultad: Media</p>
+            <div class="overlay-buttons">
+              <a href="/html/rutas.html" class="btn btn-map"><i class="fas fa-map-marked-alt"></i> Ver ruta</a>
+              <a href="#" class="btn btn-save"><i class="fas fa-heart"></i> Guardar ruta</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- === ITEM 7 === -->
+        <div class="gallery-item">
+          <img src="{% static '/images/imagenes/tres_cruces.jpeg' %}" alt="Cruces">
+          <div class="image-title">Ruta Cruzada</div>
+          <div class="overlay-img">
+            <h4>Verano</h4>
+            <h6>Ruta Cruzada</h6>
+            <h5>Distancia: 7 km</h5>
+            <p>Dificultad: Alta</p>
+            <div class="overlay-buttons">
+              <a href="/html/rutas.html" class="btn btn-map"><i class="fas fa-map-marked-alt"></i> Ver ruta</a>
+              <a href="#" class="btn btn-save"><i class="fas fa-heart"></i> Guardar ruta</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- === ITEM 8 === -->
+        <div class="gallery-item">
+          <img src="{% static '/images/imagenes/atarcedec-morro.jpg' %}" alt="Atardecer">
+          <div class="image-title">Atardecer en Morro</div>
+          <div class="overlay-img">
+            <h4>Lluvioso</h4>
+            <h6>Atardecer en Morro</h6>
+            <h5>Distancia: 4 km</h5>
+            <p>Dificultad: Media</p>
+            <div class="overlay-buttons">
+              <a href="/html/rutas.html" class="btn btn-map"><i class="fas fa-map-marked-alt"></i> Ver ruta</a>
+              <a href="#" class="btn btn-save"><i class="fas fa-heart"></i> Guardar ruta</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- === ITEM 9 === -->
+        <div class="gallery-item">
+          <img src="{%static '/images/imagenes/create.png' %}" alt="Ruta Creativa">
+          <div class="image-title">Ruta Creativa</div>
+          <div class="overlay-img">
+            <h4>Verano</h4>
+            <h6>Ruta Creativa</h6>
+            <h5>Distancia: 6 km</h5>
+            <p>Dificultad: Alta</p>
+            <div class="overlay-buttons">
+              <a href="/html/rutas.html" class="btn btn-map"><i class="fas fa-map-marked-alt"></i> Ver ruta</a>
+              <a href="#" class="btn btn-save"><i class="fas fa-heart"></i> Guardar ruta</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!--===== NOVEDADES =====-->
+<section class="conocenos-web">
+  <div class="container">
+    <h2 class="text-center mb-4">😍 "Explora, Comparte y Conecta" 👀</h2>
+
+    <div id="conocenosCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+      
+      <!-- Indicadores (puntos inferiores) -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#conocenosCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#conocenosCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#conocenosCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#conocenosCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#conocenosCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#conocenosCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+      </div>
+
+      <!-- Contenido del carrusel -->
+      <div class="carousel-inner text-center">
+        <div class="carousel-item active">
+          <p class="carousel-text fs-2">Descarga mapas y rutas para navegación offline.</p>
+        </div>
+        <div class="carousel-item">
+          <p class="carousel-text fs-2">Planifica tu aventura con mapas, rutas y recomendaciones.</p>
+        </div>
+        <div class="carousel-item">
+          <p class="carousel-text fs-2">Comparte tus recorridos y experiencias con otros caminantes.</p>
+        </div>
+        <div class="carousel-item">
+          <p class="carousel-text fs-2">Conéctate con la naturaleza desde la comodidad de tu smartphone.</p>
+        </div>
+        <div class="carousel-item">
+          <p class="carousel-text fs-2">Rutas, mapas y más a un clic.</p>
+        </div>
+        <div class="carousel-item">
+          <p class="carousel-text fs-2">La herramienta ideal para caminantes.</p>
+        </div>
+      </div>
+
+      <!-- Flechas (controles) -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#conocenosCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#conocenosCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </div>
+</section>
+</main>
+
+<!--======= FOOTER + QR REVISADO ========-->
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Explora Rutas</h3>
+      <ul>
+        <li>Mapa de Popayán</li>
+        <li>Explora por fotos</li>
+        <li>Actividades</li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Acerca de</h3>
+      <ul>
+        <li>Sobre nosotros</li>
+        <li>Donantes</li>
+        <li>Centro de ayuda</li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Contacto</h3>
+      <ul>
+        <li>Contacto</li>
+        <li>Soporte</li>
+        <li>Colaboraciones</li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Redes Sociales</h3>
+      <ul>
+        <li>Facebook</li>
+        <li>Instagram</li>
+        <li>Twitter</li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Descargas</h3>
+      <p>¡Descárgala ya!</p>
+      <img src="{% static '/images/el morro/Captura de pantalla 2025-04-08 170442.png' %}" alt="Código QR" class="qr-code">
+      <p>Escanéame</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Walk App. | Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+  <script src="/scripts/script.js"></script>
+  <script src="/scripts/index2.js"></script>
+  <script src="/scripts/menu.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

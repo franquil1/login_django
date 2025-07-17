@@ -1,0 +1,219 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comunidad - Walk App</title>
+  <link rel="stylesheet" href="{% static '/css/comunidad.css' %}"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <link rel="icon" href="{% static '/images/imagenes/logo.jpg' %}" type="image/x-icon">
+</head>
+
+<body>
+  <!-- ========= ENCABEZADO ========== -->
+  <header class="header-wrapper">
+    <nav class="main-nav">
+      <!-- Izquierda: Logo y título -->
+      <div class="nav-brand">
+        <img src="{% static '/images/imagenes/logo.jpg' %}" alt="Walk App Logo" class="nav-logo" />
+        <h1 class="nav-title">Walk App</h1>
+      </div>
+
+      <!-- Centro: Enlaces de navegación -->
+      <div class="nav-center">
+        <ul class="nav-links">
+          <li><a href="/html/home.html">Inicio</a></li>
+          <li><a href="/html/comunidad.html">Comunidad</a></li>
+          <li><a href="/juegos/juegos.html">Juegos</a></li>
+          <li><a href="/html/rutas.html">Rutas</a></li>
+          <li><a href="/html/ranking.html">Ranking</a></li>
+        </ul>
+      </div>
+
+      <!-- Derecha: Búsqueda e inicio de sesión -->
+      <div class="nav-right">
+        <form class="nav-search">
+          <div class="input-container">
+            <input type="text" placeholder="Buscar" class="nav-input" />
+            <button type="submit" class="nav-icon-button" aria-label="Buscar">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </form>
+        <a href="/html/login.html" class="btn-login">Iniciar sesión</a>
+      </div>
+
+      <!-- Botón menú hamburguesa -->
+      <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+
+    <!-- ========= MENÚ LATERAL MÓVIL ========= -->
+    <div id="mobileMenu" class="mobile-menu">
+      <div class="menu-header">
+        <img src="/imgs/imagenes/logo.jpg" alt="Walk App Logo" class="nav-logo" />
+        <h1 class="mobile-menu-titulo">WALK APP</h1>
+        <button id="closeMenu" class="close-btn" aria-label="Cerrar menú">&times;</button>
+      </div>
+      <a href="#">Inicio</a>
+      <a href="/html/comunidad.html">Comunidad</a>
+      <a href="/juegos/juegos.html">Juegos</a>
+      <a href="/html/rutas.html">Rutas</a>
+      <a href="/html/ranking.html">Ranking</a>
+      <a href="/html/login.html" class="btn-login">Iniciar sesión</a>
+
+      <form class="nav-search">
+        <div class="input-icon-wrapper">
+          <input type="text" placeholder="Buscar" class="nav-input" />
+          <button type="submit" class="nav-button-inside" aria-label="Buscar">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- ========= BIENVENIDA ========= -->
+    <div class="bienvenida">
+      <img src="{% static '/images/imagenes/logo.jpg' %}" alt="Logo Walk App" class="main-logo img-fluid mx-auto d-block mb-4" />
+      <h1 class="text-center">Comunidad - <span>WALK APP</span></h1>
+      <p class="text-center">Únete a nuestra comunidad de caminantes y comparte tu ruta, tus pasos y tu historia.</p>
+    </div>
+  </header>
+
+  <!-- ========= CONTENIDO PRINCIPAL ========= -->
+  <div class="container-fluid mt-4">
+    <div class="row">
+      
+      <!-- Publicaciones -->
+      <div class="col-lg-8">
+        <h2 class="mb-4">Últimos en <span class="text-success">Colombia</span></h2>
+
+        <!-- Publicación 1 -->
+        <div class="post-card p-3">
+          <div class="d-flex align-items-center mb-2">
+            <img src="{% static '/images/iconos/avatar1.png' %}" alt="User" class="profile-pic me-2">
+            <strong>Sara Mejía</strong>
+          </div>
+          <img src="{% static '/images/imagenes/cocora1.jpg' %}" alt="Valle Cocora" class="img-fluid rounded mb-3">
+          <h5>🌿 Aven0tura Valle de Cocora - Salento Loop</h5>
+          <p class="text-muted">Salento, Quindío, Colombia</p>
+          <p class="mb-2">Un recorrido lleno de palmas de cera, aire puro y vistas únicas. ¡Imperdible para los senderistas!</p>
+          <div class="d-flex justify-content-between">
+            <div>
+              <i class="fas fa-thumbs-up me-1"></i> 24
+              <i class="fas fa-comment ms-3 me-1"></i> 8
+            </div>
+            <div>
+              <i class="fas fa-star text-warning"></i> 4.8
+            </div>
+          </div>
+        </div>
+
+        <!-- Publicación 2 -->
+        <div class="post-card p-3">
+          <div class="d-flex align-items-center mb-2">
+            <img src="{% static '/images/iconos/avatar1.png' %}" alt="User" class="profile-pic me-2">
+            <strong>Santiago Trujillo</strong>
+          </div>
+          <img src="{% static '/images/imagenes/elvalledelcocora.jpg' %}" alt="Valle Cocora 2" class="img-fluid rounded mb-3">
+          <h5>🌄 Cocora Trail – Belleza del corazón del Quindío</h5>
+          <p class="text-muted">Valle del Cocora, Colombia</p>
+          <p class="mb-2">Travesía ideal de un día, con más de 2.400m de altura y paisajes inigualables. Muy recomendado para senderistas moderados.</p>
+          <div class="d-flex justify-content-between">
+            <div>
+              <i class="fas fa-thumbs-up me-1"></i> 31
+              <i class="fas fa-comment ms-3 me-1"></i> 12
+            </div>
+            <div>
+              <i class="fas fa-star text-warning"></i> 4.6
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-lg-4">
+        <div class="sidebar p-3 bg-white rounded shadow-sm">
+          <h5>🔗 Conecta</h5>
+          <input type="text" class="form-control mb-3" placeholder="Buscar senderistas">
+          <h6>Miembros sugeridos</h6>
+          <ul class="list-unstyled">
+            <li class="d-flex align-items-center mb-2">
+              <img src="{% static '/images/iconos/avatar1.png' %}" class="member-avatar me-2" alt="Miembro">
+              <span>Laura Gómez</span>
+            </li>
+            <li class="d-flex align-items-center mb-2">
+              <img src="{% static '/images/iconos/avatar1.png' %}" class="member-avatar me-2" alt="Miembro">
+              <span>Juan Ríos</span>
+            </li>
+            <li class="d-flex align-items-center mb-2">
+              <img src="{% static '/images/iconos/avatar1.png' %}" class="member-avatar me-2" alt="Miembro">
+              <span>Camila Pérez</span>
+            </li>
+          </ul>
+          <button class="btn btn-outline-primary btn-sm w-100 mt-3">Ver todos</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========= FOOTER ========= -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Explora Rutas</h3>
+        <ul>
+          <li>Mapa de Popayán</li>
+          <li>Explora por fotos</li>
+          <li>Actividades</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Acerca de</h3>
+        <ul>
+          <li>Sobre nosotros</li>
+          <li>Donantes</li>
+          <li>Centro de ayuda</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Contacto</h3>
+        <ul>
+          <li>Contacto</li>
+          <li>Soporte</li>
+          <li>Colaboraciones</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Redes Sociales</h3>
+        <ul>
+          <li>Facebook</li>
+          <li>Instagram</li>
+          <li>Twitter</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Descargas</h3>
+        <p>¡Descárgala ya!</p>
+        <img src="{% static '/images/el morro/Captura de pantalla 2025-04-08 170442.png' %}" alt="Código QR" class="qr-code">
+        <p>Escanéame</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Walk App. | Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ========= SCRIPTS ========= -->
+  <script src="/scripts/script.js"></script>
+  <script src="/scripts/index2.js"></script>
+  <script src="/scripts/menu.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

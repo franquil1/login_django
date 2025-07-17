@@ -1,0 +1,171 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juegos - Walk App</title>
+  <link rel="stylesheet" href="{% static '/css/juegos.css' %}" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <link rel="icon" href="{% static '/images/imagenes/logo.jpg' %}" type="image/x-icon">
+</head>
+<body>
+
+  <!-- ========= ENCABEZADO ========== -->
+  <header class="header-wrapper">
+    <nav class="main-nav">
+      <!-- Izquierda: Logo y título -->
+      <div class="nav-brand">
+        <img src="{% static '/images/imagenes/logo.jpg' %}" alt="Walk App Logo" class="nav-logo" />
+        <h1 class="nav-title">Walk App</h1>
+      </div>
+
+      <!-- Centro: Enlaces de navegación -->
+      <div class="nav-center">
+        <ul class="nav-links">
+          <li><a href="/html/home.html">Inicio</a></li>
+          <li><a href="/html/comunidad.html">Comunidad</a></li>
+          <li><a href="/juegos/juegos.html">Juegos</a></li>
+          <li><a href="/html/rutas.html">Rutas</a></li>
+          <li><a href="/html/ranking.html">Ranking</a></li>
+        </ul>
+      </div>
+
+      <!-- Derecha: Búsqueda e inicio de sesión -->
+      <div class="nav-right">
+        <form class="nav-search" role="search">
+          <div class="input-container">
+            <input type="text" placeholder="Buscar" class="nav-input" aria-label="Buscar" />
+            <button type="submit" class="nav-icon-button" aria-label="Buscar">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </form>
+        <a href="/html/login.html" class="btn-login">Iniciar sesión</a>
+      </div>
+
+      <!-- Botón menú hamburguesa -->
+      <div class="hamburger" aria-label="Abrir menú móvil">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+
+    <!-- ========= MENÚ LATERAL MÓVIL ========= -->
+    <div id="mobileMenu" class="mobile-menu">
+      <div class="menu-header">
+        <img src="/imgs/imagenes/logo.jpg" alt="Walk App Logo" class="nav-logo" />
+        <h1 class="mobile-menu-titulo">Juegos - Walk App</h1>
+        <button id="closeMenu" class="close-btn" aria-label="Cerrar menú">&times;</button>
+      </div>
+      <a href="/html/home.html">Inicio</a>
+      <a href="/html/comunidad.html">Comunidad</a>
+      <a href="/juegos/juegos.html">Juegos</a>
+      <a href="/html/rutas.html">Rutas</a>
+      <a href="/html/ranking.html">Ranking</a>
+      <a href="/login.html" class="btn-login">Iniciar sesión</a>
+      <form class="nav-search" role="search">
+        <div class="input-icon-wrapper">
+          <input type="text" placeholder="Buscar" class="nav-input" aria-label="Buscar" />
+          <button type="submit" class="nav-button-inside" aria-label="Buscar">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- ========= BIENVENIDA ========= -->
+    <div class="bienvenida">
+      <img src="{% static '/images/imagenes/logo.jpg' %}" alt="Logo Walk App" class="main-logo img-fluid mx-auto d-block mb-4" />
+      <h1 class="text-center">Juegos - Walk App</h1>
+      <p class="text-center">Un rato de juego también hace parte del camino</p>
+    </div>
+  </header>
+
+  <!-- ===== CONTENIDO JUEGOS ====== -->
+  <main class="mover">
+    <div class="card">
+      <p class="heading">Flappy Bird</p>
+      <p class="para">¡Ayuda al pájaro a esquivar obstáculos y volar sin parar!</p>
+      <div class="overlay"></div>
+      <a href="/juegos/juegos/flapy/niveles.html" class="card-btn">Jugar</a>
+    </div>
+
+    <div class="card">
+      <p class="heading">Trivia Popayán</p>
+      <p class="para">Pon a prueba tus conocimientos sobre la ciudad blanca</p>
+      <div class="overlay"></div>
+      <a href="/juegos/juegos/trivia/index.html" class="card-btn">Jugar</a>
+    </div>
+  </main>
+
+  <!--======= FOOTER CON QR ========-->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Explora Rutas</h3>
+        <ul>
+          <li>Mapa de Popayán</li>
+          <li>Explora por fotos</li>
+          <li>Actividades</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Acerca de</h3>
+        <ul>
+          <li>Sobre nosotros</li>
+          <li>Donantes</li>
+          <li>Centro de ayuda</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Contacto</h3>
+        <ul>
+          <li>Contacto</li>
+          <li>Soporte</li>
+          <li>Colaboraciones</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Redes Sociales</h3>
+        <ul>
+          <li>Facebook</li>
+          <li>Instagram</li>
+          <li>Twitter</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Descargas</h3>
+        <p>¡Descárgala ya!</p>
+        <img src="{%static '/images/el morro/Captura de pantalla 2025-04-08 170442.png' %}" alt="Código QR" class="qr-code">
+        <p>Escanéame</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Walk App | Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- === AUDIO Y SCRIPT === -->
+  <audio autoplay loop>
+    <source src="/static/sonidos/electro.mp3" type="audio/mpeg">
+    <source src="/static/sonidos/electro.mp3" type="audio/ogg">
+  </audio>
+
+  <script>
+    window.addEventListener('load', () => {
+      const audio = document.querySelector('audio');
+      if (audio) {
+        audio.play().catch(error => {
+          console.error('Error al reproducir audio:', error);
+        });
+      }
+    });
+  </script>
+
+  <script src="/scripts/menu.js"></script>
+</body>
+</html>

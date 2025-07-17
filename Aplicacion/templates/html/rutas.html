@@ -1,0 +1,241 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rutas - Walk App</title>
+  <link rel="stylesheet" href="{% static '/css/rutas.css' %}" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <link rel="icon" href="{% static '/images/imagenes/logo.jpg' %}" type="image/x-icon">
+</head>
+
+<body>
+  <!-- ========= ENCABEZADO ========== -->
+  <header class="header-wrapper">
+    <nav class="main-nav">
+      <!-- Izquierda: Logo y título -->
+      <div class="nav-brand">
+        <img src="{% static '/images/imagenes/logo.jpg' %}" alt="Walk App Logo" class="nav-logo" />
+        <h1 class="nav-title">Walk App</h1>
+      </div>
+
+      <!-- Centro: Enlaces de navegación -->
+      <div class="nav-center">
+        <ul class="nav-links">
+          <li><a href="/html/home.html">Inicio</a></li>
+          <li><a href="/html/comunidad.html">Comunidad</a></li>
+          <li><a href="/juegos/juegos.html">Juegos</a></li>
+          <li><a href="/html/rutas.html">Rutas</a></li>
+          <li><a href="/html/ranking.html">Ranking</a></li>
+        </ul>
+      </div>
+
+      <!-- Derecha: Búsqueda e inicio de sesión -->
+      <div class="nav-right">
+        <form class="nav-search">
+          <div class="input-container">
+            <input type="text" placeholder="Buscar" class="nav-input" />
+            <button type="submit" class="nav-icon-button" aria-label="Buscar">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </form>
+        <a href="/html/login.html" class="btn-login">Iniciar sesión</a>
+      </div>
+
+      <!-- Botón menú hamburguesa -->
+      <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+
+    <!-- ========= MENÚ LATERAL MÓVIL ========= -->
+    <div id="mobileMenu" class="mobile-menu">
+      <div class="menu-header">
+        <img src="{% static '/images/imagenes/logo.jpg' %}" alt="Walk App Logo" class="nav-logo" />
+        <h1 class="mobile-menu-titulo">WALK APP</h1>
+        <button id="closeMenu" class="close-btn" aria-label="Cerrar menú">&times;</button>
+      </div>
+      <a href="/html/home.html">Inicio</a>
+      <a href="/html/comunidad.html">Comunidad</a>
+      <a href="/juegos/juegos.html">Juegos</a>
+      <a href="/html/rutas.html">Rutas</a>
+      <a href="/html/ranking.html">Ranking</a>
+      <a href="/html/login.html" class="btn-login">Iniciar sesión</a>
+
+      <form class="nav-search">
+        <div class="input-icon-wrapper">
+          <input type="text" placeholder="Buscar" class="nav-input" />
+          <button type="submit" class="nav-button-inside" aria-label="Buscar">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- ========= BIENVENIDA ========= -->
+    <div class="bienvenida">
+      <img src="{% static '/images/imagenes/logo.jpg' %}" alt="Logo Walk App" class="main-logo img-fluid mx-auto d-block mb-4" />
+      <h1 class="text-center">Rutas - <span>WALK APP</span></h1>
+      <p class="text-center">Explora caminos, conquista senderos y haz de cada ruta una nueva aventura.</p>
+    </div>
+  </header>
+  
+  <!--====== CONTENIDO RUTAS =====-->
+  <div class="container">
+    <section aria-labelledby="titulo-rutas">
+      <h2 id="titulo-rutas">Rutas de Senderismo</h2>
+      <!-- Las rutas ya están completas con descripciones -->
+      <article class="ruta">
+  <h3>Ruta 1: Sendero del Morro de Tulcán</h3>
+  <p><strong>Tiempo:</strong> 2 horas</p>
+  <p><strong>Distancia:</strong> 5 km</p>
+  <p><strong>Terreno:</strong> Boscoso</p>
+  <p>Un recorrido suave por el histórico Morro de Tulcán, ideal para conectarse con la historia indígena y disfrutar vistas del centro colonial.</p>
+</article>
+
+<article class="ruta">
+  <h3>Ruta 2: Camino de las Cascadas de Pisojé</h3>
+  <p><strong>Tiempo:</strong> 3 horas</p>
+  <p><strong>Distancia:</strong> 8 km</p>
+  <p><strong>Terreno:</strong> Rocoso</p>
+  <p>Aventura a través de senderos rocosos rodeados de vegetación, hasta llegar a las cascadas naturales del corregimiento de Pisojé.</p>
+</article>
+
+<article class="ruta">
+  <h3>Ruta 3: Senda al Mirador de El Tablazo</h3>
+  <p><strong>Tiempo:</strong> 1.5 horas</p>
+  <p><strong>Distancia:</strong> 4 km</p>
+  <p><strong>Terreno:</strong> Montañoso</p>
+  <p>Un ascenso corto pero panorámico que culmina en un mirador con vista a todo el valle de Popayán y sus montañas andinas.</p>
+</article>
+
+<article class="ruta">
+  <h3>Ruta 4: Travesía del Río Molino</h3>
+  <p><strong>Tiempo:</strong> 4 horas</p>
+  <p><strong>Distancia:</strong> 10 km</p>
+  <p><strong>Terreno:</strong> Mixto</p>
+  <p>Ruta fluvial que sigue el cauce del emblemático Río Molino, cruzando pequeños puentes, zonas rurales y huertas campesinas.</p>
+</article>
+
+<article class="ruta">
+  <h3>Ruta 5: Sendero de Las Guacas</h3>
+  <p><strong>Tiempo:</strong> 2.5 horas</p>
+  <p><strong>Distancia:</strong> 6 km</p>
+  <p><strong>Terreno:</strong> Llanura</p>
+  <p>Un paseo tranquilo por una zona de vestigios arqueológicos, ideal para caminantes que buscan naturaleza e historia precolombina.</p>
+</article>
+
+<article class="ruta">
+  <h3>Ruta 6: Camino del Sol en El Sendero Yanaconas</h3>
+  <p><strong>Tiempo:</strong> 3.5 horas</p>
+  <p><strong>Distancia:</strong> 9 km</p>
+  <p><strong>Terreno:</strong> Arenoso</p>
+  <p>Ruta cálida y semiabierta, donde el sol acompaña entre potreros y caminos rurales en el sector tradicional de Yanaconas.</p>
+</article>
+
+<article class="ruta">
+  <h3>Ruta 7: Sendero Nocturno del Río Blanco</h3>
+  <p><strong>Tiempo:</strong> 2 horas</p>
+  <p><strong>Distancia:</strong> 5 km</p>
+  <p><strong>Terreno:</strong> Mixto</p>
+  <p>Sendero perfecto para caminatas al atardecer, con sonidos del agua y avistamiento de luciérnagas en ciertas épocas del año.</p>
+</article>
+
+<article class="ruta">
+  <h3>Ruta 8: Travesía del Valle de Puracé</h3>
+  <p><strong>Tiempo:</strong> 5 horas</p>
+  <p><strong>Distancia:</strong> 12 km</p>
+  <p><strong>Terreno:</strong> Montañoso</p>
+  <p>Imponente ruta en el Parque Nacional Puracé, rodeada de páramo, frailejones y con posibilidad de avistar el majestuoso cóndor andino.</p>
+</article>
+
+<article class="ruta">
+  <h3>Ruta 9: Camino del Lago El Boquerón</h3>
+  <p><strong>Tiempo:</strong> 3 horas</p>
+  <p><strong>Distancia:</strong> 7 km</p>
+  <p><strong>Terreno:</strong> Llanura</p>
+  <p>Ruta serena que atraviesa humedales y lagunas cercanas a la vereda El Boquerón, perfecta para observación de aves.</p>
+</article>
+
+<article class="ruta">
+  <h3>Ruta 10: Sendero de las Nubes en el Volcán Puracé</h3>
+  <p><strong>Tiempo:</strong> 6 horas</p>
+  <p><strong>Distancia:</strong> 15 km</p>
+  <p><strong>Terreno:</strong> Montañoso</p>
+  <p>Una experiencia exigente pero única en los altos del volcán Puracé, literalmente caminando entre nubes y azufres activos.</p>
+</article>
+    </section>
+
+    <section class="recomendaciones" aria-labelledby="titulo-recomendaciones">
+      <h2 id="titulo-recomendaciones">Recomendaciones de Equipamiento</h2>
+      <p>Para disfrutar de tu ruta de senderismo, te recomendamos llevar:</p>
+      <ul>
+        <li>Calzado cómodo y adecuado para el terreno</li>
+        <li>Ropa ligera y transpirable</li>
+        <li>Protector solar y gorra</li>
+        <li>Botella de agua y snacks</li>
+        <li>Mapa o GPS</li>
+        <li>Botiquín básico</li>
+        <li>Linterna si planeas caminar al atardecer</li>
+      </ul>
+    </section>
+  </div>
+
+<!--======= FOOTER + QR REVISADO ========-->
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Explora Rutas</h3>
+      <ul>
+        <li>Mapa de Popayán</li>
+        <li>Explora por fotos</li>
+        <li>Actividades</li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Acerca de</h3>
+      <ul>
+        <li>Sobre nosotros</li>
+        <li>Donantes</li>
+        <li>Centro de ayuda</li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Contacto</h3>
+      <ul>
+        <li>Contacto</li>
+        <li>Soporte</li>
+        <li>Colaboraciones</li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Redes Sociales</h3>
+      <ul>
+        <li>Facebook</li>
+        <li>Instagram</li>
+        <li>Twitter</li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Descargas</h3>
+      <p>¡Descárgala ya!</p>
+      <img src="{% static '/images/el morro/Captura de pantalla 2025-04-08 170442.png' %}" alt="Código QR" class="qr-code">
+      <p>Escanéame</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Walk App. | Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script src="/scripts/menu.js"></script>
+
+</body>
+</html>
