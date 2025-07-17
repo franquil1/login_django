@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial_scale=1.0">
+    <title>Mi Página Principal</title>
+</head>
+<body>
+    <h1>¡Bienvenido, {{ username }}!</h1>
+    <p>Esta es tu página principal después de iniciar sesión.</p>
+    <p><a href="{% url 'mi_app_registro:logout' %}">Cerrar Sesión</a></p>
+</body>
+</html>

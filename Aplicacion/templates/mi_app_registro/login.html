@@ -17,20 +17,12 @@
         </ul>
     {% endif %}
 
-    {# Aquí irá el formulario de login que crearemos en la Parte 2 #}
     <form method="post">
         {% csrf_token %}
-        <p>
-            <label for="id_username">Nombre de usuario:</label>
-            <input type="text" name="username" id="id_username" required>
-        </p>
-        <p>
-            <label for="id_password">Contraseña:</label>
-            <input type="password" name="password" id="id_password" required>
-        </p>
+        {{ form.as_p }} {# Esto renderizará los campos username y password del LoginForm #}
         <button type="submit">Iniciar Sesión</button>
     </form>
 
-    <p>¿No tienes cuenta? <a href="{% url 'Aplicacion:registro' %}">Regístrate aquí</a></p>
+    <p>¿No tienes cuenta? <a href="{% url 'mi_app_registro:registro' %}">Regístrate aquí</a></p>
 </body>
 </html>

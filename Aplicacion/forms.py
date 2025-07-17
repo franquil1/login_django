@@ -19,3 +19,9 @@ class RegistroUsuarioForms(forms.ModelForm):
         if contraseña and contraseña2 and contraseña != contraseña2:
             raise forms.ValidationError("Las contraseñas no coinciden.")
         return cleaned_data
+    
+
+# Nuevo formulario para el login
+class LoginForm(forms.Form):
+    username = forms.CharField(label='Nombre de usuario', max_length=100)
+    password = forms.CharField(label='Contraseña', widget=forms.PasswordInput)
